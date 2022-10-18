@@ -8,7 +8,7 @@ def main():
         for i in range(25):
             isbn = ""
             title = ""
-            num = random.randrange(999_999)
+            num = random.randrange(9_999_999_999)
             #add leading 0s if needed
             isbn += (6-len(str(num)))*"0" + str(num) + " "
             for j in range(13):
