@@ -26,6 +26,7 @@ public class main
                 String isbn = scanner.nextLine();
                 String title = scanner.nextLine();
                 String author = scanner.nextLine();
+                //TODO:create book object
                 //TODO:make AVLNode object
                 //TODO:add AVLNode to AVLT
             }
