@@ -21,6 +21,11 @@ public class Book implements Comparable<Book>
         return this.title.compareTo(anotherBook.title);
     }
 
+    public boolean equals(Book anotherBook)
+    {
+        return this.title.equals(anotherBook.title) && this.author.equals(anotherBook.author);
+    }
+
     public String getTitle() { return title; }
     public String getAuthor() { return author; }
     public void setTitle(String str) { title = str; }
