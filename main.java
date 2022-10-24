@@ -16,26 +16,26 @@ public class main
             // AVLNode leftPtr;
             // AVLNode rightPtr;
         //add each textbook into da AVL tree
-        AVLNode[] list = new AVLNode[10];
+        Book[] list = new Book[10];
+        int i = 0;
         try 
         {
             Scanner scanner;
             scanner = new Scanner(new File("testbuks.txt"));
-            int threepeat = 1;
             while(scanner.hasNextLine())
             {
                 String isbn = scanner.nextLine();
                 String title = scanner.nextLine();
                 String author = scanner.nextLine();
-                //TODO:create book object
+                //create book object
                 Book temp = new Book(title, author);
-                //TODO:make AVLNode object
-                AVLNode bemb = new AVLNode(isbn, temp, 0, null, null);
-                //TODO:add AVLNode to AVLT
-                
+                //add book object to a collection
+                list[i] = temp;
+                i++;
             }
         } catch (Exception e) { e.printStackTrace(); }
-
-        // AVLTree tree = new AVLTree<>(list);
+        
+        AVLTree tree = new AVLTree<Book>(list);
+        
     }
 }
