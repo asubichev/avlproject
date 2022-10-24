@@ -16,6 +16,7 @@ public class main
             // AVLNode leftPtr;
             // AVLNode rightPtr;
         //add each textbook into da AVL tree
+        AVLNode[] list = new AVLNode[10];
         try 
         {
             Scanner scanner;
@@ -27,9 +28,14 @@ public class main
                 String title = scanner.nextLine();
                 String author = scanner.nextLine();
                 //TODO:create book object
+                Book temp = new Book(title, author);
                 //TODO:make AVLNode object
+                AVLNode bemb = new AVLNode(isbn, temp, 0, null, null);
                 //TODO:add AVLNode to AVLT
+                
             }
         } catch (Exception e) { e.printStackTrace(); }
+
+        // AVLTree tree = new AVLTree<>(list);
     }
 }
