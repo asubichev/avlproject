@@ -32,6 +32,7 @@ public class Main
                 list[i] = temp;
                 i++;
             }
+            scanner.close();
         } catch (Exception e) { e.printStackTrace(); }
         
         AVLTree tree = new AVLTree<Book>(list);
