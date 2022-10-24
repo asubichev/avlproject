@@ -1,10 +1,9 @@
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 import javax.activity.InvalidActivityException;
 
-public class main 
+public class Main 
 {
     public static void main(String[] args)
     {
@@ -36,6 +35,6 @@ public class main
         } catch (Exception e) { e.printStackTrace(); }
         
         AVLTree tree = new AVLTree<Book>(list);
-        
+        System.out.print("");
     }
 }
