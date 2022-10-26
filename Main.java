@@ -7,14 +7,11 @@ public class Main
 {
     public static void main(String[] args)
     {
-        //read in every 3 lines from testbuks.txt
+        //read in every 3 lines from input file
         //create textbook object each time
-            // String key;
-            // Book bookObject; Title <> Author's Name
-            // int height;
-            // AVLNode leftPtr;
-            // AVLNode rightPtr;
-        //add each textbook into da AVL tree
+            // String isbn //compared as long
+            // String title
+            // String Author
         Book[] list = new Book[10];
         int i = 0;
         try 
@@ -31,8 +28,6 @@ public class Main
                 //add book object to a collection
                 list[i] = temp;
                 i++;
-                // System.out.println(temp);
-                //TODO: need to include leading 0s, so isbn should be String but converted for comparison only
             }
             scanner.close();
         } catch (Exception e) { e.printStackTrace(); }
