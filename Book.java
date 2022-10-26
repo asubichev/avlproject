@@ -18,7 +18,8 @@ public class Book implements Comparable<Book>
     @Override
     public int compareTo(Book anotherBook)
     {
-        return this.title.compareTo(anotherBook.title);
+        //return this.title.compareTo(anotherBook.title);
+        return this.author.compareTo(anotherBook.author);
     }
 
     public boolean equals(Book anotherBook)
