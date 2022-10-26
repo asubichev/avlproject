@@ -38,4 +38,8 @@ public class Book implements Comparable<Book>
     public void setTitle(String str) { title = str; }
     public void setAuthor(String str) { author = str; }
     public void setIsbn(String str) { isbn = Long.valueOf(str); }
+    public String toString()
+    {
+        return Long.toString(isbn);
+    }
 }
