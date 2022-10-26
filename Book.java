@@ -2,7 +2,7 @@ public class Book implements Comparable<Book>
 {
     private String title;
     private String author;
-    private long isbn;
+    private String isbn;
 
     public Book()
     {
@@ -10,7 +10,7 @@ public class Book implements Comparable<Book>
         author = "";
     }
 
-    public Book(String x, String y, long b)
+    public Book(String x, String y, String b)
     {
         title = x;
         author = y;
@@ -29,17 +29,14 @@ public class Book implements Comparable<Book>
 
     public boolean equals(Book anotherBook)
     {
-        return this.isbn == anotherBook.isbn;
+        return Long.valueOf(this.isbn) == Long.valueOf(anotherBook.isbn);
     }
 
     public String getTitle() { return title; }
     public String getAuthor() { return author; }
-    public long getIsbn() { return isbn; }
+    public String getIsbn() { return isbn; }
     public void setTitle(String str) { title = str; }
     public void setAuthor(String str) { author = str; }
-    public void setIsbn(String str) { isbn = Long.valueOf(str); }
-    public String toString()
-    {
-        return Long.toString(isbn);
-    }
+    public void setIsbn(String str) { isbn = str; }
+    public String toString() { return isbn; }
 }

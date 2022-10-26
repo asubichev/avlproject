@@ -23,7 +23,7 @@ public class Main
             scanner = new Scanner(new File("testbuks.txt"));
             while(scanner.hasNextLine())
             {
-                long isbn = Long.valueOf(scanner.nextLine());
+                String isbn = scanner.nextLine();
                 String title = scanner.nextLine();
                 String author = scanner.nextLine();
                 //create book object
