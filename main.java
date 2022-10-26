@@ -1,10 +1,9 @@
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 import javax.activity.InvalidActivityException;
 
-public class main 
+public class Main 
 {
     public static void main(String[] args)
     {
@@ -16,20 +15,27 @@ public class main
             // AVLNode leftPtr;
             // AVLNode rightPtr;
         //add each textbook into da AVL tree
+        Book[] list = new Book[10];
+        int i = 0;
         try 
         {
             Scanner scanner;
             scanner = new Scanner(new File("testbuks.txt"));
-            int threepeat = 1;
             while(scanner.hasNextLine())
             {
-                String isbn = scanner.nextLine();
+                long isbn = Long.valueOf(scanner.nextLine());
                 String title = scanner.nextLine();
                 String author = scanner.nextLine();
-                //TODO:create book object
-                //TODO:make AVLNode object
-                //TODO:add AVLNode to AVLT
+                //create book object
+                Book temp = new Book(title, author, isbn);
+                //add book object to a collection
+                list[i] = temp;
+                i++;
             }
+            scanner.close();
         } catch (Exception e) { e.printStackTrace(); }
+        
+        AVLTree tree;
+        tree = new AVLTree<Book>(list);
     }
 }
