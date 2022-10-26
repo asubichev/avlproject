@@ -53,17 +53,21 @@ public class AVLTree<E extends Comparable<E>> extends BST<E> {
       switch (balanceFactor(A)) {
         case -2:
           if (balanceFactor((AVLTreeNode<E>)A.left) <= 0) {
+            System.out.println("Imbalance condition occurred at inserting ISBN " + o + "; fixed in LL Rotation");
             balanceLL(A, parentOfA); // Perform LL rotation
           }
           else {
+            System.out.println("Imbalance condition occurred at inserting ISBN " + o + "; fixed in LR Rotation");
             balanceLR(A, parentOfA); // Perform LR rotation
           }
           break;
         case +2:
           if (balanceFactor((AVLTreeNode<E>)A.right) >= 0) {
+            System.out.println("Imbalance condition occurred at inserting ISBN " + o + "; fixed in RR Rotation");
             balanceRR(A, parentOfA); // Perform RR rotation
           }
           else {
+            System.out.println("Imbalance condition occurred at inserting ISBN " + o + "; fixed in RL Rotation");
             balanceRL(A, parentOfA); // Perform RL rotation
           }
       }

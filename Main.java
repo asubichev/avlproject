@@ -7,14 +7,11 @@ public class Main
 {
     public static void main(String[] args)
     {
-        //read in every 3 lines from testbuks.txt
+        //read in every 3 lines from input file
         //create textbook object each time
-            // String key;
-            // Book bookObject; Title <> Author's Name
-            // int height;
-            // AVLNode leftPtr;
-            // AVLNode rightPtr;
-        //add each textbook into da AVL tree
+            // String isbn //compared as long
+            // String title
+            // String Author
         Book[] list = new Book[10];
         int i = 0;
         try 
@@ -23,7 +20,7 @@ public class Main
             scanner = new Scanner(new File("testbuks.txt"));
             while(scanner.hasNextLine())
             {
-                long isbn = Long.valueOf(scanner.nextLine());
+                String isbn = scanner.nextLine();
                 String title = scanner.nextLine();
                 String author = scanner.nextLine();
                 //create book object
