@@ -23,11 +23,11 @@ public class Main
             scanner = new Scanner(new File("testbuks.txt"));
             while(scanner.hasNextLine())
             {
-                String isbn = scanner.nextLine();
+                long isbn = Long.valueOf(scanner.nextLine());
                 String title = scanner.nextLine();
                 String author = scanner.nextLine();
                 //create book object
-                Book temp = new Book(title, author);
+                Book temp = new Book(title, author, isbn);
                 //add book object to a collection
                 list[i] = temp;
                 i++;
