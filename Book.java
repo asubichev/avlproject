@@ -14,6 +14,7 @@ public class Book implements Comparable<Book>
     {
         title = x;
         author = y;
+        isbn = b;
     }
 
     @Override
@@ -28,7 +29,7 @@ public class Book implements Comparable<Book>
 
     public boolean equals(Book anotherBook)
     {
-        return this.title.equals(anotherBook.title) && this.author.equals(anotherBook.author);
+        return this.isbn == anotherBook.isbn;
     }
 
     public String getTitle() { return title; }
