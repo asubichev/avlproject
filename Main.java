@@ -31,8 +31,8 @@ public class Main
                 //add book object to a collection
                 list[i] = temp;
                 i++;
-                System.out.println(temp);
-                //FIXME: since toString is set up in book, all you gotta do now is print "Imbalance condition occurred at inserting ISBN " + e + "; fixed in XX Rotation"
+                // System.out.println(temp);
+                //TODO: need to include leading 0s, so isbn should be String but converted for comparison only
             }
             scanner.close();
         } catch (Exception e) { e.printStackTrace(); }
